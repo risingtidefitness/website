@@ -1,0 +1,242 @@
+:root {
+    --primary-color: #333;
+    --secondary-color: #666;
+    --accent-color: #FF4438; /* Red color for links */
+    --background-color: #fff;
+    --hero-background: #14213D; /* Dark navy blue */
+    --max-width: 1400px;
+    --header-height: 40px;
+}
+
+/* ... existing CSS reset and body styles ... */
+
+/* Hero Section Styles */
+.hero {
+    background-color: var(--hero-background);
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    margin-bottom: 20px;
+}
+
+.hero-name {
+    color: #FF4438; /* Using the accent color */
+    font-size: 42px;
+    font-weight: 300;
+    font-family: 'Crimson Text', serif;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.hero-title {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 300;
+    opacity: 0.9;
+    text-align: center;
+}
+
+/* Content Grid Adjustments */
+.content-grid {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 7fr 5fr; /* Adjusted ratio */
+    gap: 60px;
+    padding: 0 40px;
+}
+
+/* Typography Adjustments */
+h1 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin: 40px 0 20px;
+    color: var(--primary-color);
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 30px 0 15px;
+    color: #FF4438; /* Changed to match the accent red color */
+}
+
+/* List Styles */
+ul {
+    margin: 15px 0 25px;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* Link Styles */
+a {
+    color: #FF4438; /* Red accent color */
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #cc3629;
+}
+
+/* Header Adjustments */
+.site-header {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    background: white;
+    height: var(--header-height);
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 40px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+}
+
+.logo-wrapper {
+    text-align: center;
+}
+
+.logo {
+    height: 45px;
+    width: auto;
+}
+
+.primary-nav {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 2px;
+}
+
+.secondary-nav {
+    justify-self: end;
+}
+
+/* Footer Adjustments */
+.site-footer {
+    margin-top: 80px;
+    padding: 40px 20px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    gap: 40px;
+}
+
+/* Section Styles */
+.section-title {
+    color: #FF4438;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+/* Contact Section */
+.contact-info {
+    margin-top: 40px;
+    padding: 20px;
+    background: #f8f8f8;
+    border-radius: 4px;
+}
+
+/* Navigation Styles */
+.primary-nav a, .secondary-nav a {
+    color: #333;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+/* Top Banner Styles */
+.top-banner {
+    background: white;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.banner-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 40px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.phone-link, .instagram-link {
+    color: #FF4438;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+/* Button Styles */
+.button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-size: 16px;
+}
+
+.phone-button {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.phone-button:hover {
+    background-color: #cc3629;
+    color: white;
+}
+
+.instagram-button {
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+.instagram-button:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* Adjust main content */
+main {
+    margin-top: 85px;
+}
+
+/* Add the Crimson Text font */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&display=swap'); 

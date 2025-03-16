@@ -1,0 +1,239 @@
+:root {
+    --primary: #14213D;
+    --accent: #FF4438;
+    --gold: #FCA311;
+    --text: #333333;
+    --light: #F5F5F5;
+    --gradient: linear-gradient(135deg, #14213D 0%, #1a2b4d 100%);
+}
+
+/* Base Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+/* Header & Navigation */
+.v2-header {
+    background: var(--gradient);
+    color: white;
+    min-height: 100vh;
+    position: relative;
+}
+
+.top-nav {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(20, 33, 61, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    height: 40px;
+}
+
+.nav-button {
+    background: var(--accent);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 20px;
+    transition: transform 0.2s;
+}
+
+.nav-button:hover {
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 100px 20px;
+    background: url('../assets/images/hero-pattern.svg') center/cover;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+.cta-primary {
+    background: var(--accent);
+    color: white;
+    padding: 20px 40px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.cta-primary:hover {
+    transform: translateY(-3px);
+}
+
+.cta-note {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Social Proof */
+.social-proof {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 60px;
+}
+
+.proof-item {
+    text-align: center;
+}
+
+.proof-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--gold);
+    display: block;
+}
+
+.proof-text {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Why Different Section */
+.why-different {
+    background: white;
+}
+
+.difference-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.difference-item {
+    padding: 30px;
+    border-radius: 8px;
+    background: var(--light);
+    transition: transform 0.3s;
+}
+
+.difference-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Programs Section */
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.program-card {
+    background: var(--gradient);
+    color: white;
+    padding: 40px;
+    border-radius: 12px;
+    transition: transform 0.3s;
+}
+
+.program-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Guarantee Section */
+.guarantee {
+    background: var(--gradient);
+    color: white;
+    text-align: center;
+}
+
+.guarantee-text {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+/* Footer */
+.v2-footer {
+    background: var(--primary);
+    color: white;
+    padding: 60px 0 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .difference-grid,
+    .programs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .social-proof {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+} 
