@@ -21,14 +21,12 @@ body {
     line-height: 1.4;
     color: var(--text);
     -webkit-font-smoothing: antialiased;
-    height: 100vh;
-    overflow: hidden;
 }
 
 .single-page-container {
-    display: grid;
-    grid-template-columns: 35% 65%;
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Hero Section (Left Column) */
@@ -333,9 +331,19 @@ body {
 /* Responsive Design */
 @media (max-width: 1024px) {
     .single-page-container {
-        grid-template-columns: 1fr;
         height: auto;
-        overflow-y: auto;
+    }
+
+    .hero-section {
+        position: relative;
+        height: auto;
+        min-height: auto;
+        padding: 2rem;
+    }
+
+    .content-section {
+        height: auto;
+        overflow: visible;
     }
 
     .hero-section h1 { font-size: 2.5rem; }
@@ -376,6 +384,23 @@ body {
 
     .info-column li {
         font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    .single-page-container {
+        flex-direction: row;
+    }
+
+    .hero-section {
+        flex: 1;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+    }
+
+    .content-section {
+        flex: 2;
     }
 }
 
