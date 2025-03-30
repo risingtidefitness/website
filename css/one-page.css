@@ -204,9 +204,10 @@ body {
 
 .service-card {
     background: var(--white);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 4px 16px rgba(20, 33, 61, 0.06);
+    height: 100%;
 }
 
 .service-card h3 {
@@ -500,4 +501,23 @@ body {
 
 .social-contact-links a:hover, .location-link:hover {
     color: var(--gold);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.social-contact-links a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Improve touch targets on mobile */
+@media screen and (max-width: 768px) {
+    .social-contact-links a,
+    .location-link {
+        padding: 0.75rem;
+    }
 } 
