@@ -5,6 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rising Tide Fitness</title>
     <link rel="stylesheet" href="css/one-page.css">
+    <style>
+        /* Base styles */
+        .single-page-container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .hero-section {
+            flex: 1;
+            padding: 2rem;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+        }
+
+        .content-section {
+            flex: 2;
+            padding: 2rem;
+        }
+
+        /* Mobile styles */
+        @media screen and (max-width: 768px) {
+            .single-page-container {
+                flex-direction: column;
+            }
+
+            .hero-section {
+                position: relative;
+                height: auto;
+                text-align: center;
+            }
+
+            .content-section {
+                padding: 1rem;
+            }
+
+            .services-container {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .logo {
+                max-width: 80%;
+            }
+
+            .social-contact-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+        }
+
+        /* Tablet styles */
+        @media screen and (min-width: 769px) and (max-width: 1024px) {
+            .services-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+        }
+
+        /* Desktop styles */
+        @media screen and (min-width: 1025px) {
+            .services-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="single-page-container">
