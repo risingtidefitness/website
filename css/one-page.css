@@ -493,7 +493,6 @@ body {
 }
 
 
-
 .location-info {
     display: flex;
     justify-content: center;
@@ -519,12 +518,6 @@ body {
     text-decoration: none;
     margin: 0 0.2em;
     white-space: nowrap;
-}
-
-.location-icon {
-    width: 18px;
-    height: 18px;
-    fill: currentColor;
 }
 
 /* Adjust contact links to be more visible */
