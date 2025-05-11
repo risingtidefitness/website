@@ -522,8 +522,14 @@ body {
 
 /* Adjust contact links to be more visible */
 .social-contact-links a, .location-link {
-    color: var(--light);
+    color: var(--white);
     opacity: 1;
+}
+
+/* Keyboard focus outlines for accessibility */
+.social-link:focus, .contact-link:focus, .location-link:focus {
+    outline: 2px solid var(--gold);
+    outline-offset: 4px;
 }
 
 .social-contact-links a:hover, .location-link:hover {
@@ -533,6 +539,10 @@ body {
 img {
     max-width: 100%;
     height: auto;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 .social-contact-links a {
@@ -547,4 +557,11 @@ img {
     .location-link {
         padding: 0.75rem;
     }
-} 
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
